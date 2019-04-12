@@ -38,7 +38,7 @@ double distance_between( GPS point1, GPS point2) {
     return 2 * R * asin(sqrt(a*a + cos(point1.latitude) * cos(point2.latitude) * b*b));
 }
 ostream & operator<< ( ostream & out, GPS point ) {
-    out << "POINT" << "( " <<point.latitude << " " << point.longitude << ")";
+    out << "POINT" << "( " <<point.latitude << " " << point.longitude << ")" << endl;
     return out;
 }
 
