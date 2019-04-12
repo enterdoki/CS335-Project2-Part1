@@ -51,7 +51,7 @@ ostream &  operator<<( ostream & os, __ItemType item ) {
 string __ItemType::toLower(string s) const{
     string new_string;
     for(int i = 0; i < s.length(); i++) {
-         new_string[i] = tolower(s[i]);
+         new_string += tolower(s[i]);
     }
     return new_string;
 }
