@@ -1,4 +1,5 @@
-# CS335-Project2-Part1 by Yu Tong Chen
+# CS335-Project2-Part1 
+by Yu Tong Chen
 HashTable Implementation
 
 ### Aril 7, 2019
