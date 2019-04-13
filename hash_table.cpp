@@ -37,7 +37,7 @@ HashTable::~HashTable() {
 }
 
 int HashTable::find(__ItemType &item) const {
-    int hash_val = item.code() % table_size;
+    unsigned int hash_val = item.code() % table_size;
     int found;
     string key;
     string param_key;
@@ -62,7 +62,7 @@ int HashTable::find(__ItemType &item) const {
 
     // Found value, param is updated with key value of item at index
     else {
-        item.get(key,value);
+        item.set(key,value);
         found = 1;
     }
 
@@ -70,7 +70,7 @@ int HashTable::find(__ItemType &item) const {
 }
 
 int HashTable::insert(__ItemType item) {
-    int hash_val = item.code() % table_size;
+    unsigned int hash_val = item.code() % table_size;
     int inserted = 0;
     string key;
     string param_key;
@@ -106,7 +106,7 @@ int HashTable::insert(__ItemType item) {
 }
 
 int HashTable::remove(__ItemType item) {
-    int hash_val = item.code() % table_size;
+    unsigned int hash_val = item.code() % table_size;
     int removed = 0;
     string key;
     string param_key;
